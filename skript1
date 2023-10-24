@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#See skript trükib välja kasutaja nime ja asukoha
+#Muutujale ipa omistame oma ipa-a"
+ipa=`hostname -I`
+
+echo -n  "Sinu kasutajanimi on: "
+whoami
+
+sleep 1.5
+echo -n  "Sinu praegune kataloog on: "
+pwd
+
+sleep 0.5
+echo  "Sinu arvuti ip aadress on: $ipa "
+
