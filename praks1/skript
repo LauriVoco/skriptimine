@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#skript kasutaja tervitamiseks.
+
+kasutaja=`whoami`
+esitaht=`whoami | cut -c1 | tr [a-z] [A-Z]`
+loputaht=`whoami | cut -c2-4`
+echo -n "Tere $esitaht$loputaht!"
