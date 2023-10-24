@@ -14,3 +14,5 @@ pwd
 sleep 0.5
 echo  "Sinu arvuti ip aadress on: $ipa "
 
+sleep 1.5
+clear
