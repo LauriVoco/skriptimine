@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#See skript annab põhjaliku ülevaate kasutajale kuupäevast ja kellaajast.
+
+#See jätab tühja rea
+echo " "
+
+#See annab nädalapäeva, kuupäeva ja aasta
+echo -n "Today is "
+date +"%A, %B %d, %Y"
+
+#See annab lihtsa kellaaja
+echo -n "Time is "
+date +"%H:%M"
+
+echo " "
+
+#See koodirida peaks väljastama kalendri koos tekstiga aga cal command ei tööta.
+echo -n "Calendar of "
+date +"%B %Y"
+#cal | tail -n 7
+
+
+#Olen ka teadlik, et saab ka lihtsamalt kirjutada kuupäeva tekstiga.
+# date+"Tänane kuupäev on %A, %B %d, %Y"
+# aga tegin ikkagi raskemat viisi :)
