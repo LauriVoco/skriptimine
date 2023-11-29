@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#aasta muutuja
+aasta=2016
+
+#president muutuja
+president="Kersti Kaljulaid"
+
+#lause keskosa muutuja
+lause_keskosa="aastal valiti Eesti presidendiks"
+
+#lause muutuja
+lause="$aasta $lause_keskosa $president"
+
+#Väljund
+echo $lause

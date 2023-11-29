@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#Küsib kasutajalt ainepunktide arvu täisarvuna
+echo -n "Sisesta ainepunktide arv täisarvuna: "
+read ainepunkt
+
+#Küsib kasutajalt nädalate arvu täisarvuna
+echo -n "Sisesta nädalate arv täisarvuna: "
+read nadal
+
+#Siin arvutame ajakulu välja
+ajakulu=$(echo "scale=1; $ainepunkt * 26 / $nadal" | bc)
+ajakulu_ummardatud=$(echo "scale=0; ($ajakulu+0.9)/1" | bc)
+
+# Tulemuse väljastamine
+echo "Ühe nädala eeldatav ajakulu on: $ajakulu_ummardatud tundi"

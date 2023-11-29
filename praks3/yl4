@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#Küsib kasutajalt reisijate arvu
+echo -n "Sisesta reisijate arv: "
+read reisijad
+
+#Küsib kasutajalt kohtade arvu bussis
+echo -n "Sisesta kohtade arv bussis: "
+read koht_arv
+
+#Teeb vajalikud arvutused
+bussid=$((($reisijad + $koht_arv -1) / $koht_arv))
+
+echo "Sõiduks on vaja $bussid bussi, et mahutada $reisijad reisijat."
