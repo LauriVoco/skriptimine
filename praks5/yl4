@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+tund=$(date +%H)
+
+#sisesta oma nimi
+nimi=`whoami`
+
+if [ $tund -ge 6 -a $tund -lt 12 ]; then
+    echo "Tere hommikust, $nimi!"
+
+elif [ $tund -ge 12 -a $tund -lt 18 ]; then
+    echo "Tere päevast, $nimi!"
+
+elif [ $tund -ge 18 -a $tund -lt 22 ]; then
+    echo "Tere õhtust, $nimi!"
+
+elif [ $tund -ge 22 -a $tund -le 24 ] || [ $tund -ge 0 -a $tund -lt 6 ]; then
+    echo "Tere õhtust, $nimi!"
+
+else
+    echo "Vigane sisend! Sisestage korrektne tundide arv."
+
+fi
