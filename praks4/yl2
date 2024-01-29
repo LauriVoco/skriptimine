@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#Skript arvutab palju rahvast bussidesse mahub
+echo -n "Sisesta reisijate arv: "
+read reisijad
+
+echo -n "Sisesta kohtade arv bussis: "
+read kohtade_arv
+
+#Arvutus
+bussid=$(( $reisijad / $kohtade_arv ))
+
+mahajaanud=$(( $reisijad % $kohtade_arv ))
+
+if [ $mahajaanud -gt 0 ]
+then
+	bussid=$(($bussid + 1 ))
+fi
+
+echo "Kokku on vaja $bussid bussi"

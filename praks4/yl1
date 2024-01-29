@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#Skript kontrollib kas arv on paaris või paaritu
+echo -n "Sisestage suvaline taisarv: "
+read arv
+
+#Nuud arvutame jaagi jagades arvu kahega
+jaak=$(( $arv % 2 ))
+
+if [ $jaak -eq 0 ]
+then
+	echo "$arv on paaris"
+else
+	echo "$arv on paaritu"
+fi
